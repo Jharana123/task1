@@ -1,0 +1,110 @@
+<html>
+    <head>
+        <title>
+            Profile Tag
+        </title>
+        <link rel="stylesheet" href="form.css">
+    </head>
+    <body>
+       
+       <center>
+           <h2>WRIYE YOUR DETAILS</h2>
+        <table border="4">
+            <tbody>
+            <tr>
+                <th>Name:</th>
+                <td><input type="text" id="name" name="name"></td>
+            </tr>
+            <tr>
+                <th>Email:</th>
+                <td><input type="mail" id="email" name="email"></td>
+            </tr>
+            <tr>
+                <th>Phone Number:</th>
+                <td><input type="number" id="Phone" name="Phone"></td>
+            </tr>
+            <tr>
+                <th>Address:</th>
+                <td><input type="text" id="address" name="address"></td>
+            </tr>
+            <tr>
+                <th>About:</th>
+                <td><input type="text" id="about" name="about"></td>
+            </tr>
+            <tr>
+                <th>College:</th>
+                <td><input type="text" id="college" name="college"></td>
+            </tr>
+            <tr id="btna">
+                <td colspan="2"><input type="button"  name="button" id="btn" value
+                    ="Submit" onclick="AddRow()"></td>
+            </tr>
+            </tbody>
+        </table>
+        <table border="4" id="show">
+            <thead>
+                <tr>
+                    <th>Name:</th>
+                    <th>Email:</th>
+                    <th>Phone Number:</th>
+                    <th>Address:</th>
+                    <th>About:</th>
+                    <th>College:</th>
+                </tr>
+            </thead>
+        </table>
+    
+        <script>
+            var list1=[];
+            var list2=[];
+            var list3=[];
+            var list4=[];
+            var list5=[];
+            var list6=[];
+
+            var n=1;
+            var x=0;
+
+            function AddRow(){
+                var AddRown=document.getElementById("show");
+                var NewRow=AddRown.insertRow(n) ;
+                
+                list1[x]=document.getElementById("name").value;
+                list2[x]=document.getElementById("email").value;
+                list3[x]=document.getElementById("Phone").value;
+                list4[x]=document.getElementById("address").value;
+                list5[x]=document.getElementById("about").value; 
+                list4[x]=document.getElementById("college").value;
+
+
+                var cell1=NewRow.insertCell(0);
+                var cell2=NewRow.insertCell(1);
+                var cell3=NewRow.insertCell(2);
+                var cell4=NewRow.insertCell(3);
+                var cell5=NewRow.insertCell(4);
+                var cell6=NewRow.insertCell(5);
+
+
+                cell1.innerHTML=list1[x];
+                cell3.innerHTML=list2[x];
+                cell3.innerHTML=list3[x];
+                cell4.innerHTML=list4[x];
+                cell5.innerHTML=list5[x];
+                cell6.innerHTML=list6[x];
+
+                n++;
+                x++;
+            }
+
+        </script>
+       
+        
+
+       
+      
+       
+
+
+    </body>
+
+</html>
